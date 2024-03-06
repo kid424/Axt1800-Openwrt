@@ -47,7 +47,7 @@ for kernel_version in $kernel_versions ;do
         exit 1
     fi
 
-    for file_path in "$patch_952_path" ;do#"$patch_953_path" "$patch_613_path" ;do
+    for file_path in "$patch_952_path" ;do
         if [ -a "$file_path" ]; then
             echo "$file_path already exists,delete."
             rm -rf "$file_path"
