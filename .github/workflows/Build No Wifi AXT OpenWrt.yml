@@ -94,6 +94,7 @@ jobs:
         [ -e gn ] && mv gn openwrt/package/feeds/kiddin9/gn
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         [ -e add_turboacc.sh ] && mv add_turboacc.sh openwrt/
+        [ -e 0610-netfilter-nf_conntrack_ecache-Fix-NSS-ECM-BRK-kernel-panic.patch ] && mv 0610-netfilter-nf_conntrack_ecache-Fix-NSS-ECM-BRK-kernel-panic.patch openwrt/target/linux/qualcommax/patches-6.1/
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
