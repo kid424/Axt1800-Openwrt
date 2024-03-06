@@ -93,6 +93,7 @@ jobs:
         [ -e extra_packages ] && mv extra_packages openwrt/package/extra_packages
         [ -e gn ] && mv gn openwrt/package/feeds/kiddin9/gn
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        [ -e add_turboacc.sh ] && mv add_turboacc.sh openwrt/
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH

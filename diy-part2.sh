@@ -18,4 +18,5 @@ sed -i 's/'OpenWrt'/'GL-AXT1800'/g' package/base-files/files/bin/config_generate
 sed -i '/strongswan-mod-kdf/d' package/feeds/packages/strongswan/Makefile
 # replace turboacc
 rm -rf package/feeds/kiddin9/luci-app-turboacc
-curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+chmod +x add_turboacc.sh
+bash add_turboacc.sh
