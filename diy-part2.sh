@@ -16,7 +16,3 @@ sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generat
 sed -i 's/'OpenWrt'/'GL-AXT1800'/g' package/base-files/files/bin/config_generate
 # remove strongswan-mod-kdf to enable luci-app-ipsec*
 sed -i '/strongswan-mod-kdf/d' package/feeds/packages/strongswan/Makefile
-# replace turboacc
-#rm -rf package/feeds/kiddin9/luci-app-turboacc
-#chmod +x add_turboacc.sh
-#bash add_turboacc.sh
