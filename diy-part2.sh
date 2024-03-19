@@ -19,4 +19,4 @@ sed -i '/strongswan-mod-kdf/d' package/feeds/packages/strongswan/Makefile
 # adjust fan speed
 sed -i 's/define\ MAX_TEMP\ 120/define\ MAX_TEMP\ 83/g' package/feeds/kiddin9/fancontrol/src/fancontrol.c
 # fix gn
-sed -i '/+$(NINJA) -C $(HOST_BUILD_DIR)\/out/s/$/ CXX=g++-10/' package/feeds/kiddin9/gn/Makefile
+#sed -i '/+$(NINJA) -C $(HOST_BUILD_DIR)\/out/s/$/ $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(CXXFLAGS) CXX=g++-10/' package/feeds/kiddin9/gn/Makefile
