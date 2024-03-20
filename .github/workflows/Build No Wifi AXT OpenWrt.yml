@@ -90,7 +90,7 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
-        [ -e Makefile ] && mv Makefile openwrt/package/feeds/kiddin9/v2ray-plugin/Makefile
+        [ -e v2ray-plugin ] && mv v2ray-plugin/Makefile openwrt/package/feeds/kiddin9/v2ray-plugin/Makefile
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         #[ -e add_turboacc.sh ] && mv add_turboacc.sh openwrt/
         #[ -e 0610-netfilter-nf_conntrack_ecache-Fix-NSS-ECM-BRK-kernel-panic.patch ] && mv 0610-netfilter-nf_conntrack_ecache-Fix-NSS-ECM-BRK-kernel-panic.patch openwrt/target/linux/qualcommax/patches-6.1/
