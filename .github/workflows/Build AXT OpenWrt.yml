@@ -90,8 +90,7 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
-        #[ -e extra_packages ] && mv extra_packages openwrt/package/extra_packages
-        #[ -e gn ] && rm -rf openwrt/package/feeds/kiddin9/gn && mv gn openwrt/package/feeds/kiddin9/gn
+        [ -e Makefile ] && mv Makefile openwrt/package/feeds/kiddin9/v2ray-plugin/Makefile
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
