@@ -90,7 +90,10 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
-        [ -e v2ray-plugin ] && mv v2ray-plugin/Makefile openwrt/package/feeds/kiddin9/v2ray-plugin/Makefile
+        # unnecessary if golang updated to 1.22 at https://git.openwrt.org/feed/packages.git
+        rm -rf openwrt/package/feeds/kiddin9/v2ray-plugin && mv openwrt/feeds/helloworld/v2ray-plugin/ openwrt/package/feeds/kiddin9/v2ray-plugin
+        # use lean's code instead of kiddin9's
+        rm -rf openwrt/package/feeds/kiddin9/shadowsocksr-libev && mv openwrt/feeds/helloworld/shadowsocksr-libev/ openwrt/package/feeds/kiddin9/shadowsocksr-libev
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
